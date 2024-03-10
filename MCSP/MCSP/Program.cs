@@ -99,3 +99,4 @@ switch (kolorSamochodu)
 Console.WriteLine("Marka samochodu o kolorze {0} to {1}.", kolorSamochodu, marka);
 
 //==============================================================//
+
