@@ -44,59 +44,97 @@
 
 // INSTRUKCJA WYBORU - SWITCH
 
-Console.WriteLine("Podaj dzień tygodnia (liczbowo od 1 do 7)");
-int dniTygodnia = int.Parse(Console.ReadLine());
+//Console.WriteLine("Podaj dzień tygodnia (liczbowo od 1 do 7)");
+//int dniTygodnia = int.Parse(Console.ReadLine());
 
-switch (dniTygodnia)
-{
-    case 1: // "case" zawsze sprawdza == 
-        Console.WriteLine("Poniedziałek");
-        break;
-    case 2:
-        Console.WriteLine("Wtorek");
-        break;
-    case 3:
-        Console.WriteLine("Środa");
-        break;
-    case 4:
-        Console.WriteLine("Czwartek");
-        break;
-    case 5:
-        Console.WriteLine("Piątek");
-        break;
-    case 6:
-    case 7:
-        Console.WriteLine("Weekend");
-        break;
-    default:
-        Console.WriteLine("Nie ma takiego dnia tygodnia!");
-        break;
-}
+//switch (dniTygodnia)
+//{
+//    case 1: // "case" zawsze sprawdza == 
+//        Console.WriteLine("Poniedziałek");
+//        break;
+//    case 2:
+//        Console.WriteLine("Wtorek");
+//        break;
+//    case 3:
+//        Console.WriteLine("Środa");
+//        break;
+//    case 4:
+//        Console.WriteLine("Czwartek");
+//        break;
+//    case 5:
+//        Console.WriteLine("Piątek");
+//        break;
+//    case 6:
+//    case 7:
+//        Console.WriteLine("Weekend");
+//        break;
+//    default:
+//        Console.WriteLine("Nie ma takiego dnia tygodnia!");
+//        break;
+//}
 
-//
-Console.WriteLine("Podaj kolor samochodu:");
-string kolorSamochodu = Console.ReadLine(); 
-string marka; 
-switch (kolorSamochodu) 
-{ 
-    case "czerwony": 
-        marka = "Ferrari"; 
-        break; 
-    case "niebieski": 
-        marka = "Ford"; 
-        break; 
-    case "czarny": 
-        marka = "Nissan"; 
-        break;
-    case "zielony":
-        marka = "Toyota";
-        break;
-    default: 
-        marka = "Nieznana"; 
-        break; 
-}
+////
+//Console.WriteLine("Podaj kolor samochodu:");
+//string kolorSamochodu = Console.ReadLine(); 
+//string marka; 
+//switch (kolorSamochodu) 
+//{ 
+//    case "czerwony": 
+//        marka = "Ferrari"; 
+//        break; 
+//    case "niebieski": 
+//        marka = "Ford"; 
+//        break; 
+//    case "czarny": 
+//        marka = "Nissan"; 
+//        break;
+//    case "zielony":
+//        marka = "Toyota";
+//        break;
+//    default: 
+//        marka = "Nieznana"; 
+//        break; 
+//}
 
-Console.WriteLine("Marka samochodu o kolorze {0} to {1}.", kolorSamochodu, marka);
+//Console.WriteLine("Marka samochodu o kolorze {0} to {1}.", kolorSamochodu, marka);
 
 //==============================================================//
 
+// PĘTLA - WHILE
+
+Console.Write("Podaj liczbę:");
+int a = int.Parse(Console.ReadLine());
+
+int i = 1; // wg konwencji od literki "i" zaczynają sie nazwy zmiennych pomocniczych
+
+while (i <= a) 
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+
+//==============================================================//
+
+// PĘTLA - DO WHILE
+// - różnica między WHILE a DO WHILE jest taka, że jeśli warunek nie zostanie spełniony, to pętla Do While uruchomi sie jeden raz
+
+Console.Write("Podaj liczbę:");
+int b = int.Parse(Console.ReadLine());
+
+int j = 1; // wg konwencji od literki "i" zaczynają sie nazwy zmiennych pomocniczych
+
+Console.WriteLine("While");
+while (j <= b) 
+{
+    Console.WriteLine(j);
+    j++;
+}
+
+Console.WriteLine("Do While");
+
+do 
+{
+    Console.WriteLine(j);
+    j++;
+} while (j <= b);
