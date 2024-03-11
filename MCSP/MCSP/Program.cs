@@ -181,17 +181,30 @@
 
 // INSTRUKCJE SKOKU - BREAK i CONTINUE
 
-for (int i = 0; ; i++)  // pętla wykona sie do 20 i zakończy działanie
-{
-    if (i > 20) 
-    {
-        break;
-    }
-    if (i % 2 == 1) // warunek sprawdza czy liczba jest nieparzysta, pętla wyświetli tylko wartości parzyste od 0 do 20
-    {
-        continue;
-    }
-    Console.WriteLine(i);
+//for (int i = 0; ; i++)  // pętla wykona sie do 20 i zakończy działanie
+//{
+//    if (i > 20) 
+//    {
+//        break;
+//    }
+//    if (i % 2 == 1) // warunek sprawdza czy liczba jest nieparzysta, pętla wyświetli tylko wartości parzyste od 0 do 20
+//    {
+//        continue;
+//    }
+//    Console.WriteLine(i);
 }
+
+//==============================================================//
+
+// INSTRUKCJA SKOKU - GOTO
+
+    int i = 0;
+hello:  // etykieta "hello:"
+    Console.WriteLine("Hello");
+    i++;
+
+    if(i < 10)
+        goto hello; // program wraca do lini z etykietą "hello:"
+
 
 //==============================================================//
