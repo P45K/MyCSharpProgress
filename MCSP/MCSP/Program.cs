@@ -29,7 +29,7 @@
 //    Console.WriteLine("Liczba równa 0");
 //}
 
-//==============================================================//
+////==============================================================//
 
 //// SKRÓCONE WYRAŻENIA WARUNKOWE - robi to samo co if{} i else{}
 //// OPERATOR TRÓJWARUNKOWY
@@ -40,9 +40,9 @@
 //string result = num % 2 == 0 ? "Parzysta" : "Nieparzysta";
 //Console.WriteLine(result);
 
-//==============================================================//
+////==============================================================//
 
-// INSTRUKCJA WYBORU - SWITCH
+//// INSTRUKCJA WYBORU - SWITCH
 
 //Console.WriteLine("Podaj dzień tygodnia (liczbowo od 1 do 7)");
 //int dniTygodnia = int.Parse(Console.ReadLine());
@@ -98,9 +98,9 @@
 
 //Console.WriteLine("Marka samochodu o kolorze {0} to {1}.", kolorSamochodu, marka);
 
-//==============================================================//
+////==============================================================//
 
-// PĘTLA - WHILE
+//// PĘTLA - WHILE
 
 //Console.Write("Podaj liczbę:");
 //int a = int.Parse(Console.ReadLine());
@@ -116,8 +116,8 @@
 
 ////==============================================================//
 
-// PĘTLA - DO WHILE
-// - różnica między WHILE a DO WHILE jest taka, że jeśli warunek nie zostanie spełniony, to pętla WHILE nie uruchomi się a DO WHILE wykona się przynajmniej jeden raz
+//// PĘTLA - DO WHILE
+//// - różnica między WHILE a DO WHILE jest taka, że jeśli warunek nie zostanie spełniony, to pętla WHILE nie uruchomi się a DO WHILE wykona się przynajmniej jeden raz
 
 //Console.Write("Podaj liczbę: ");
 
@@ -152,29 +152,46 @@
 //} while (wiek <= 0 || wiek >= 100);
 
 
+////==============================================================//
+
+
+//// PĘTLA - FOR
+
+//Console.WriteLine("Podaj liczbę: ");
+//int a = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
+
+//for ( int i = 1; i <= a; i++) // gdzie: (i = 1;) - delklaracja zmiennej pomocniczej, (i <= a;) - warunek wykonania petli, (i++) - instrukcja, która zostanie wykonana na końcu petli aż do wykonania warunku pętli
+//{
+//    Console.WriteLine(i);
+//}
+
+//// PĘTLA - FOR EACH
+//// FOR EACH - TO PETLA OBIEKTOWA i NIE DZIAŁA W KONTEKŚCIE DLA POJEDYŃCZEJ LICZBY.
+
+//Console.WriteLine("Podaj tekst: ");
+//string text = Console.ReadLine();
+
+//foreach (char litera in text)
+//{
+//    Console.WriteLine(litera);
+//}
+
 //==============================================================//
 
+// INSTRUKCJE SKOKU - BREAK i CONTINUE
 
-// PĘTLA - FOR
-
-Console.WriteLine("Podaj liczbę: ");
-int a = int.Parse(Console.ReadLine());
-
-for ( int i = 1; i <= a; i++) // gdzie: (i = 1;) - delklaracja zmiennej pomocniczej, (i <= a;) - warunek wykonania petli, (i++) - instrukcja, która zostanie wykonana na końcu petli aż do wykonania warunku pętli
+for (int i = 0; ; i++)  // pętla wykona sie do 20 i zakończy działanie
 {
+    if (i > 20) 
+    {
+        break;
+    }
+    if (i % 2 == 1) // warunek sprawdza czy liczba jest nieparzysta, pętla wyświetli tylko wartości parzyste od 0 do 20
+    {
+        continue;
+    }
     Console.WriteLine(i);
 }
-
-// PĘTLA - FOR EACH
-// FOR EACH - TO PETLA OBIEKTOWA i NIE DZIAŁA W KONTEKŚCIE DLA POJEDYŃCZEJ LICZBY.
-
-Console.WriteLine("Podaj tekst: ");
-string text = Console.ReadLine();
-
-foreach (char litera in text)
-{
-    Console.WriteLine(litera);
-}
-
 
 //==============================================================//
