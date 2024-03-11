@@ -1,25 +1,34 @@
 ﻿//==============================================================//
 
-// DZIEŃ 1 i 2 - PRAKTYKA
-// ŚREDNIA ARYTMETYCZNA
+// TABLICE JEDNOWYMIAROWE
 
-float a;    // przechowywane wartości od użytkownika (liczby wpisuywane przez użytkownika)    
-float sum = 0;  // suma podanych liczb, aż program nie napotka 0 (gdy użytkownik wpisze 0);
-int i = 0;  // ile liczb podał użytkownik
+// TABLICA ZAWSZE JEST JEDNEGO TYPU
+// TABLICE SĄ Z GÓRY OKREŚLONEJ WARTOŚCI
 
-do
+// pierwszy sposób deklaracji tablicy jednowymiarowej
+int[] tablica = new int[5]; // jedna zmienna przechwoująca 5 warrtości (5 szufladek) - 5 indeksów
+tablica[0] = 1; // index 1
+tablica[1] = 2;
+tablica[2] = 3;
+tablica[3] = 4;
+tablica[4] = 5; // index 5
+
+Console.WriteLine("Length: {0}", tablica.Length);
+
+//  for (int i = 0; i < 5; i++)    // pętla na sztywno - ma się wykonywac daną ilośc razy
+for (int i = 0; i < tablica.Length; i++)    // pętla dynamiczna
 {
-    Console.Write("Podaj liczbę: ");
-    a = float.Parse(Console.ReadLine());
-    if (a == 0) // ta pętla odejmie "0" od ilości podanych liczb
-    {
-        break;  // instrukcja skoku przerywająca pętlę
-    }
-    sum += a;
-    i++;
-} while (a != 0);   // warunek kontynuacji pętli (a musi być różne od 0, żeby pętla się wykonywała)
+    Console.WriteLine(tablica[i]);
+}
 
-Console.WriteLine("Średnia arytmetyczna to: {0}", sum / i);
+Console.WriteLine();
 
+// drugi sposób deklaracji tablicy jednowymiarowej
+char[] tablica2 = { 'H', 'E', 'L', 'L', 'O' };  // tablica zawierająca 5 wypełnionych indeksów
+
+foreach (char litera in tablica2) 
+{
+    Console.WriteLine(litera);
+}
 
 //==============================================================//
