@@ -119,37 +119,62 @@
 // PĘTLA - DO WHILE
 // - różnica między WHILE a DO WHILE jest taka, że jeśli warunek nie zostanie spełniony, to pętla WHILE nie uruchomi się a DO WHILE wykona się przynajmniej jeden raz
 
-Console.Write("Podaj liczbę: ");
+//Console.Write("Podaj liczbę: ");
 
-int b = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
 
-int j = 1; // wg konwencji od literki "i" zaczynają sie nazwy zmiennych pomocniczych
+//int j = 1; // wg konwencji od literki "i" zaczynają sie nazwy zmiennych pomocniczych
 
-Console.WriteLine("While");
-while (j <= b)
+//Console.WriteLine("While");
+//while (j <= b)
+//{
+//    Console.WriteLine(j);
+//    j++;
+//}
+
+//Console.WriteLine("Do While");
+//j = 1;
+
+//do
+//{
+//    Console.WriteLine(j);
+//    j++;
+//} while (j <= b);
+
+//// === PROGRAMIK PODAJ WIEK > 0, < 100 === //
+
+//int wiek = 0;   // jeśli użytkownik wprowadzi wiek mniejszy od zera (np -1) i większy od 100 (np 101), to program wykonapętlę ponownie.
+
+//do
+//{
+//    Console.WriteLine("Wprowadź wiek większy od zera, ale mniejszy od 100:");
+//    wiek = Convert.ToInt32(Console.ReadLine());
+//} while (wiek <= 0 || wiek >= 100);
+
+
+//==============================================================//
+
+
+// PĘTLA - FOR
+
+Console.WriteLine("Podaj liczbę: ");
+int a = int.Parse(Console.ReadLine());
+
+for ( int i = 1; i <= a; i++) // gdzie: (i = 1;) - delklaracja zmiennej pomocniczej, (i <= a;) - warunek wykonania petli, (i++) - instrukcja, która zostanie wykonana na końcu petli aż do wykonania warunku pętli
 {
-    Console.WriteLine(j);
-    j++;
+    Console.WriteLine(i);
 }
 
-Console.WriteLine("Do While");
-j = 1;
+// PĘTLA - FOR EACH
+// FOR EACH - TO PETLA OBIEKTOWA i NIE DZIAŁA W KONTEKŚCIE DLA POJEDYŃCZEJ LICZBY.
 
-do
+Console.WriteLine("Podaj tekst: ");
+string text = Console.ReadLine();
+
+foreach (char litera in text)
 {
-    Console.WriteLine(j);
-    j++;
-} while (j <= b);
-
-// === PROGRAMIK PODAJ WIEK > 0, < 100 === //
-
-int wiek = 0;   // jeśli użytkownik wprowadzi wiek mniejszy od zera (np -1) i większy od 100 (np 101), to program wykonapętlę ponownie.
-
-do
-{
-    Console.WriteLine("Wprowadź wiek większy od zera, ale mniejszy od 100:");
-    wiek = Convert.ToInt32(Console.ReadLine());
-} while (wiek <= 0 || wiek >= 100);
+    Console.WriteLine(litera);
+}
 
 
 //==============================================================//
