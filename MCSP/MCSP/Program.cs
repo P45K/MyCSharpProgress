@@ -72,19 +72,55 @@
 //    }
 //}
 
+////==============================================================//
+
+//    // FUNKCJE - WARTOŚCI DOMYŚLNE
+
+//MojaFunkcja(" H E L L O   W O R L D! ", 5);
+//MojaFunkcja(" H E L L O!");
+//MojaFunkcja();  // jeśli wszystkie argumenty w funkcji maja przypisana wartośc domyślną, to jest możliwość wywołania tej funkcji bez podawania argumentów
+
+//static void MojaFunkcja(string tekst = "H I!", int ileRazy = 1)  // funkcja z argumentami, z przypisaną wartością domyślną do nich, jeśli chcemy przypisać tylko jedną wartośc domyślną w funkcji, która ma więcej niz jeden argument, to ten argument musi być przypisany zawsze na końcu.
+//{
+//    for (int i = 0; i < ileRazy; i++)
+//    {
+//        Console.WriteLine(tekst);
+//    }
+//}
+
+
 //==============================================================//
 
-    // FUNKCJE - WARTOŚCI DOMYŚLNE
+    // FUNKCJE - PRZECIĄŻANIE NAZW FUNKCJI
 
-MojaFunkcja(" H E L L O   W O R L D! ", 5);
-MojaFunkcja(" H E L L O!");
-MojaFunkcja();  // jeśli wszystkie argumenty w funkcji maja przypisana wartośc domyślną, to jest możliwość wywołania tej funkcji bez podawania argumentów
+    //!!! PRZECIĄŻANIE NAZW FUNKCJI NA PONIŻSZYM SPOSOBIE DZIAŁA TYLKO PRZY UŻYCIU STAREJ METODY MAIN!!!
 
-static void MojaFunkcja(string tekst = "H I!", int ileRazy = 1)  // funkcja z argumentami, z przypisaną wartością domyślną do nich, jeśli chcemy przypisać tylko jedną wartośc domyślną w funkcji, która ma więcej niz jeden argument, to ten argument musi być przypisany zawsze na końcu.
+using System;
+namespace MCSP
 {
-    for (int i = 0; i < ileRazy; i++)
+    class Program
     {
-        Console.WriteLine(tekst);
+        static void Main(string[] args)
+        {
+            MojaFunkcjaAdd(2);
+            MojaFunkcjaAdd(2, 3, 4);
+            MojaFunkcjaAdd(2.5);
+        }
+
+            static void MojaFunkcjaAdd(int a)
+            {
+                Console.WriteLine(++a);
+            }
+
+            static void MojaFunkcjaAdd(double a)
+            {
+                Console.WriteLine(++a);
+            }
+
+            static void MojaFunkcjaAdd(int a, int b, int c)
+            {
+                Console.WriteLine(a + b + c);
+            }
     }
 }
 
