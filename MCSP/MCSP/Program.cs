@@ -59,12 +59,28 @@
 
 //==============================================================//
 
-// FUNKCJE - ARGUMENTY NAZWANE
+//    // FUNKCJE - ARGUMENTY NAZWANE
+
+//MojaFunkcja(" H E L L O   W O R L D! ", 5);
+//MojaFunkcja(ileRazy: 5, tekst: "Hi");   // wywołanie funkcji z argumentami nazwanymi, daje nam możliwośc zamiany kolejności argumentów
+
+//static void MojaFunkcja(string tekst, int ileRazy)  // funkcja wieloargumentowa - wyświetli 5 razy napis " H E L L O   W O R L D!"
+//{
+//    for (int i = 0; i < ileRazy; i++)
+//    {
+//        Console.WriteLine(tekst);
+//    }
+//}
+
+//==============================================================//
+
+    // FUNKCJE - WARTOŚCI DOMYŚLNE
 
 MojaFunkcja(" H E L L O   W O R L D! ", 5);
-MojaFunkcja(ileRazy: 5, tekst: "Hi");   // wywołanie funkcji z argumentami nazwanymi, daje nam możliwośc zamiany kolejności argumentów
+MojaFunkcja(" H E L L O!");
+MojaFunkcja();  // jeśli wszystkie argumenty w funkcji maja przypisana wartośc domyślną, to jest możliwość wywołania tej funkcji bez podawania argumentów
 
-static void MojaFunkcja(string tekst, int ileRazy)  // funkcja wieloargumentowa - wyświetli 5 razy napis " H E L L O   W O R L D!"
+static void MojaFunkcja(string tekst = "H I!", int ileRazy = 1)  // funkcja z argumentami, z przypisaną wartością domyślną do nich, jeśli chcemy przypisać tylko jedną wartośc domyślną w funkcji, która ma więcej niz jeden argument, to ten argument musi być przypisany zawsze na końcu.
 {
     for (int i = 0; i < ileRazy; i++)
     {
