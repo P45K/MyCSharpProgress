@@ -34,29 +34,42 @@
 //    }
 //}
 
+////==============================================================//
+
+//    // FUNKCJE - ZWRACANIE WARTOŚCI
+
+
+//int res = FunkcjaAdd(5, 10);
+//Console.WriteLine(res);
+
+//static int FunkcjaAdd(int a, int b) // funkcja typu int 
+//{
+//    int sum = a + b;
+//    return sum; // return (słówko skoku) kończy, przerywa działanie funkcji i powinno być zawsze na końcu funkcji
+//}
+
+//    // prostsza wersja
+
+//    //  Console.WriteLine(FunkcjaAdd2(5, 10));
+
+//    //  static int FunkcjaAdd2(int c, int d)
+//    //  {
+//    //      return c + d;
+//    //  }
+
 //==============================================================//
 
-// FUNKCJE - ZWRACANIE WARTOŚCI
+// FUNKCJE - ARGUMENTY NAZWANE
 
+MojaFunkcja(" H E L L O   W O R L D! ", 5);
+MojaFunkcja(ileRazy: 5, tekst: "Hi");   // wywołanie funkcji z argumentami nazwanymi, daje nam możliwośc zamiany kolejności argumentów
 
-int res = FunkcjaAdd(5, 10);
-Console.WriteLine(res);
-
-static int FunkcjaAdd(int a, int b) // funkcja typu int 
+static void MojaFunkcja(string tekst, int ileRazy)  // funkcja wieloargumentowa - wyświetli 5 razy napis " H E L L O   W O R L D!"
 {
-    int sum = a + b;
-    return sum; // return kończy, przerywa działanie funkcji i powinno być zawsze na końcu funkcji
+    for (int i = 0; i < ileRazy; i++)
+    {
+        Console.WriteLine(tekst);
+    }
 }
 
-    // prostsza wersja
-
-    //  Console.WriteLine(FunkcjaAdd2(5, 10));
-
-    //  static int FunkcjaAdd2(int c, int d)
-    //  {
-    //      return c + d;
-    //  }
-
 //==============================================================//
-
-
